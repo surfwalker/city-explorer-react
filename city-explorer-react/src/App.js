@@ -4,15 +4,25 @@ import SearchForm from './search-form.js';
 import Map from './map.js';
 import SearchResults from './search-results.js';
 
-function App() {
-  return (
-    <>
-      <Header />
-      <SearchForm />
-      <Map />
-      <SearchResults />
-    </>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      location: {}
+    }
+  }
+  
+  render() {
+    return (
+      <>
+        <Header />
+        <SearchForm />
+        <Map />
+        <SearchResults />
+      </>
+    );
+  }
 }
 
 export default App;
